@@ -1,11 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 const Form = () => {
   const initialValues = { name: "", surname: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [isSubmit, setIsSubmit] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -97,7 +99,16 @@ const Form = () => {
         </div>
         <p>{formErrors.password}</p>
         <div>
-          <button className="">Register</button>
+          <button
+            onClick={() => {
+              if (isSubmit) {
+                navigate("/welcome");
+              }
+            }}
+            className=""
+          >
+            Register
+          </button>
         </div>
       </form>
     </div>
