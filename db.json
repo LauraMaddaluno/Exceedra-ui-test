@@ -1,0 +1,84 @@
+{
+  "players" :  [
+    {
+      "id" : 1,
+      "name" : "Novak",
+      "surname": "Đoković",
+      "nationality" : "SRB",
+      "age" : 34,
+      "points": 11015
+    },
+    {
+      "id" : 2,
+      "name" : "Daniil",
+      "surname": "Medvedev",
+      "nationality" : "RUS",
+      "age" : 25,
+      "points": 8935
+    },
+    {
+      "id" : 3,
+      "name" : "Alexander",
+      "surname": "Zverev",
+      "nationality" : "DEU",
+      "age" : 24,
+      "points": 7970
+    },
+    {
+      "id" : 4,
+      "name" : "Stefanos",
+      "surname": "Tsitsipas",
+      "nationality" : "GRC",
+      "age" : 23,
+      "points": 6540
+      },
+    {
+      "id" : 5,
+      "name" : "Rafael",
+      "surname": "Nadal",
+      "nationality" : "ESP",
+      "age" : 35,
+      "points": 4875
+    },
+    {
+      "id" : 6,
+      "name" : " Andrey",
+      "surname": "Rublev",
+      "nationality" : "RUS",
+      "age" : 24,
+      "points": 4785
+    },
+    {
+      "id" : 7,
+      "name" : "Matteo",
+      "surname": "Berrettini",
+      "nationality" : "ITA",
+      "age" : 25,
+      "points": 4568
+    },
+    {
+      "id" : 8,
+      "name" : "Casper",
+      "surname": "Ruud",
+      "nationality" : "NOR",
+      "age" : 25,
+      "points": 4155
+    },
+    {
+      "id" : 9,
+      "name" : "Felix",
+      "surname": "Auger Aliassime",
+      "nationality" : "CAN",
+      "age" : 21,
+      "points": 3608
+    },        
+    {
+      "id" : 10,
+      "name" : "Jannik",
+      "surname": "Sinner",
+      "nationality" : "ITA",
+      "age" : 20,
+      "points": 3390
+    }
+  ]
+}
