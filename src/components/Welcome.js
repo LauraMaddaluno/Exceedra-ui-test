@@ -1,4 +1,5 @@
 import React from "react";
+import PlayersGrid from "./PlayersGrid";
 import { useState, useEffect } from "react";
 
 function Welcome() {
@@ -8,23 +9,17 @@ function Welcome() {
     const fetchPlayers = async () => {
       const response = await fetch("http://localhost:5000/players");
       const data = await response.json();
-      console.log(data);
       setPlayers(data);
     };
     fetchPlayers();
   }, []);
 
   return (
-    <section>
+    <div>
       <h1>Welcome</h1>
       <hr></hr>
-      {players.map((player) => (
-        <div>
-          {player.name} {player.surname} {player.nationality} {player.age}
-          {player.points}
-        </div>
-      ))}
-    </section>
+      <PlayersGrid players={players} />
+    </div>
   );
 }
 
