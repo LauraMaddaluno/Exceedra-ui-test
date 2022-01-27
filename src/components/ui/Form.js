@@ -23,6 +23,7 @@ const Form = () => {
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
+      navigate("/welcome");
     }
   }, [formErrors]);
 
@@ -99,16 +100,7 @@ const Form = () => {
         </div>
         <p>{formErrors.password}</p>
         <div>
-          <button
-            onClick={() => {
-              if (isSubmit) {
-                navigate("/welcome");
-              }
-            }}
-            className=""
-          >
-            Register
-          </button>
+          <button className="">Register</button>
         </div>
       </form>
     </div>
