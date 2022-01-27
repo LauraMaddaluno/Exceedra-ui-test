@@ -1,4 +1,5 @@
 import React from "react";
+import Table from "react-bootstrap/Table";
 import { useState, useEffect } from "react";
 
 function Welcome() {
@@ -17,13 +18,36 @@ function Welcome() {
   return (
     <section>
       <h1>Welcome</h1>
-      <hr></hr>
-      {players.map((player) => (
+
+      <Table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Surname</th>
+            <th>Nationality</th>
+            <th>Age</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {players.map((player) => (
+            <tr>
+              <td>{player.name}</td>
+              <td>{player.surname}</td>
+              <td>{player.nationality}</td>
+              <td>{player.age}</td>
+              <td>{player.points}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+
+      {/* {players.map((player) => (
         <div>
-          {player.name} {player.surname} {player.nationality} {player.age}
-          {player.points}
-        </div>
-      ))}
+        {player.name} {player.surname} {player.nationality} {player.age}
+           {player.points}
+       </div>
+       ))} */}
     </section>
   );
 }
