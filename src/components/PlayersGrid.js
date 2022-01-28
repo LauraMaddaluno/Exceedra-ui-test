@@ -6,6 +6,7 @@ const PlayersGrid = ({ players }) => {
     <Table>
       <thead>
         <tr>
+          <th>Ranking</th>
           <th>First Name</th>
           <th>Surname</th>
           <th>Nationality</th>
@@ -16,6 +17,7 @@ const PlayersGrid = ({ players }) => {
       <tbody>
         {players.map((player) => (
           <tr>
+            <td>{player.id}</td>
             <td>{player.name}</td>
             <td>{player.surname}</td>
             <td>{player.nationality}</td>

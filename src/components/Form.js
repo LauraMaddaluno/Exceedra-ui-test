@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Nationality from "./Nationality.js";
 const Form = () => {
   const initialValues = { name: "", surname: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
@@ -77,6 +78,10 @@ const Form = () => {
           ></input>
         </div>
         <p>{formErrors.surname}</p>
+        <div>
+          <label>Nationality</label>
+          <Nationality />
+        </div>
         <div>
           <label>Email</label>
           <input
