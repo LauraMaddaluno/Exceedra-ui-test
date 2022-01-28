@@ -2,17 +2,21 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Nationality from "./Nationality.js";
+
 const Form = () => {
   const initialValues = { name: "", surname: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [isSubmit, setIsSubmit] = useState(false);
   const [formErrors, setFormErrors] = useState({});
-
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+  };
+
+  const setSelectedCountry = (country) => {
+    setFormValues({ ...formValues, country: country });
   };
 
   const handleSubmit = (e) => {
@@ -79,9 +83,10 @@ const Form = () => {
         </div>
         <p>{formErrors.surname}</p>
         <div>
-          <label>Nationality</label>
-          <Nationality />
+          <label>Nationality *optional</label>
+          <Nationality setSelectedCountry={setSelectedCountry} />
         </div>
+        <br></br>
         <div>
           <label>Email</label>
           <input
