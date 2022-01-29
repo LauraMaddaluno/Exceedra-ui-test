@@ -4,6 +4,19 @@ import { useState, useEffect } from "react";
 
 function Welcome() {
   const [players, setPlayers] = useState([]);
+  const [order, setOrder] = useState("ASC");
+
+  const sorting = (col) => {
+    if (order === "ASC") {
+      const sorted = [...players].sort((a, b) => (a[col] > b[col] ? 1 : -1));
+      setPlayers(sorted);
+      setOrder("DES");
+    } else {
+      const sorted = [...players].sort((a, b) => (a[col] < b[col] ? 1 : -1));
+      setPlayers(sorted);
+      setOrder("ASC");
+    }
+  };
 
   useEffect(() => {
     const fetchPlayers = async () => {
@@ -17,8 +30,8 @@ function Welcome() {
   return (
     <div>
       <h1>Welcome</h1>
-      <hr></hr>
-      <PlayersGrid players={players} />
+
+      <PlayersGrid players={players} sorting={sorting} />
     </div>
   );
 }

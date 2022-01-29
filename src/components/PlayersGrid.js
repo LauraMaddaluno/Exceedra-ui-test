@@ -1,32 +1,33 @@
 import React from "react";
-import Table from "react-bootstrap/Table";
 
-const PlayersGrid = ({ players }) => {
+const PlayersGrid = ({ players, sorting }) => {
   return (
-    <Table>
-      <thead>
-        <tr>
-          <th>Ranking</th>
-          <th>First Name</th>
-          <th>Surname</th>
-          <th>Nationality</th>
-          <th>Age</th>
-          <th>Points</th>
-        </tr>
-      </thead>
-      <tbody>
-        {players.map((player) => (
+    <div className="container">
+      <table className="table table-bordered">
+        <thead>
           <tr>
-            <td>{player.id}</td>
-            <td>{player.name}</td>
-            <td>{player.surname}</td>
-            <td>{player.nationality}</td>
-            <td>{player.age}</td>
-            <td>{player.points}</td>
+            <th onClick={() => sorting("id")}>Ranking</th>
+            <th onClick={() => sorting("name")}>First Name</th>
+            <th onClick={() => sorting("surname")}>Surname</th>
+            <th onClick={() => sorting("nationality")}>Nationality</th>
+            <th onClick={() => sorting("age")}>Age</th>
+            <th onClick={() => sorting("points")}>Points</th>
           </tr>
-        ))}
-      </tbody>
-    </Table>
+        </thead>
+        <tbody>
+          {players.map((player) => (
+            <tr key={player.id}>
+              <td>{player.id}</td>
+              <td>{player.name}</td>
+              <td>{player.surname}</td>
+              <td>{player.nationality}</td>
+              <td>{player.age}</td>
+              <td>{player.points}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
