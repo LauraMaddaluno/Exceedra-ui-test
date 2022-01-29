@@ -11,29 +11,13 @@ body {
   height: 100vh;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
 p {
   line-height: 1.7;
   color: rgb(221, 97, 25);
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-  line-height: 2.2;
-}
-
-h1,
-h2,
-h3 {
+h1 {
   font-weight: 600;
-  /* margin-bottom: 10px; */
   padding-top: 70px;
 }
 
@@ -43,49 +27,6 @@ h3 {
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 60px;
-}
-
-.header ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header ul li {
-  margin-left: 20px;
-}
-
-.header ul li a {
-  display: flex;
-  align-items: center;
-}
-
-.header ul li a:hover {
-  color: #777;
-}
-
-.header ul li a svg {
-  margin-right: 5px;
-}
-
-.heading {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 50px;
-  padding: 0 20px;
-}
-
-.heading p {
-  color: #828282;
 }
 
 .form {
@@ -98,7 +39,6 @@ h3 {
 }
 
 .form-group input,
-.form-group textarea,
 .form-group select {
   width: 100%;
   padding: 10px;
@@ -108,74 +48,9 @@ h3 {
   font-family: inherit;
 }
 
-.form-group label {
-  text-align: left;
-  display: block;
-  margin: 0 0 5px 3px;
-}
-
-.btn {
-  padding: 10px 20px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  background: #000;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  text-align: center;
-  appearance: button;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn svg {
-  margin-right: 8px;
-}
-
-.btn-reverse {
-  background: #fff;
-  color: #000;
-}
-
 .btn-block {
   width: 100%;
   margin-bottom: 20px;
-}
-
-.btn-sm {
-  padding: 5px 15px;
-  font-size: 13px;
-}
-
-.btn-back {
-  width: 150px;
-  margin-bottom: 20px;
-}
-
-/* .btn:hover {
-  transform: scale(1.5);
-} */
-
-.btn-close {
-  background: none;
-  border: none;
-  color: #000;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @media (max-width: 600px) {
@@ -186,14 +61,6 @@ h3 {
   .form {
     width: 90%;
   }
-
-  .heading h1 {
-    font-size: 2rem;
-  }
-
-  .heading p {
-    font-size: 1.5rem;
-  }
 }
 .btn:hover {
   cursor: pointer;
@@ -202,6 +69,4 @@ h3 {
     rgb(125, 255, 39) 0%,
     rgb(11, 167, 58) 100%
   );
-  /* transition: all 4s ease-out; */
-  /* transform: scale(0.95); */
 }

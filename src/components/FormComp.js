@@ -121,7 +121,7 @@ const FormComp = () => {
           <p>{formErrors.password}</p>
 
           <div>
-            <Button className="btn btn-block">Register</Button>
+            <button className="btn btn-block">Register</button>
           </div>
         </form>
       </section>
