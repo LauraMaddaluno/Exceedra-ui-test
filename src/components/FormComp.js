@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Nationality from "./Nationality.js";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/button";
 
 const FormComp = () => {
   const initialValues = { name: "", surname: "", email: "", password: "" };
@@ -67,7 +66,7 @@ const FormComp = () => {
           <div>
             <lable>Name</lable>
             <input
-              className="form-control"
+              className="form-control placeholders"
               type="text"
               name="name"
               placeholder={formErrors.name}
@@ -79,7 +78,7 @@ const FormComp = () => {
           <div>
             <label>Surname</label>
             <input
-              className="form-control"
+              className="form-control placeholders"
               type="text"
               name="surname"
               placeholder={formErrors.surname}
@@ -89,7 +88,7 @@ const FormComp = () => {
           </div>
 
           <div>
-            <label>Nationality *optional</label>
+            <label></label>
             <Nationality setSelectedCountry={setSelectedCountry} />
           </div>
 
@@ -98,7 +97,7 @@ const FormComp = () => {
           <div>
             <label>Email</label>
             <input
-              className="form-control"
+              className="form-control placeholders"
               type="email"
               name="email"
               placeholder={formErrors.email}
