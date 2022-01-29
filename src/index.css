@@ -19,6 +19,7 @@ p {
 h1 {
   font-weight: 600;
   padding-top: 70px;
+  text-align: center;
 }
 
 .container {
@@ -48,25 +49,29 @@ h1 {
   font-family: inherit;
 }
 
+input.placeholders::placeholder {
+  color: rgb(221, 97, 25);
+}
+
+.options {
+  text-align: center;
+}
+
 .btn-block {
   width: 100%;
   margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
-  .boxes {
-    grid-template-columns: 1fr;
-  }
+.welcome {
+  padding-bottom: 40px;
+}
 
+@media (max-width: 600px) {
   .form {
     width: 90%;
   }
 }
 .btn:hover {
   cursor: pointer;
-  background: linear-gradient(
-    90deg,
-    rgb(125, 255, 39) 0%,
-    rgb(11, 167, 58) 100%
-  );
+  background: linear-gradient(90deg, #27a9ff 0%, rgb(26, 102, 189) 100%);
 }

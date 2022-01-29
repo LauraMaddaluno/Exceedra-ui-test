@@ -1,6 +1,7 @@
 import React from "react";
 import PlayersGrid from "./PlayersGrid";
 import { useState, useEffect } from "react";
+import "../index.css";
 
 function Welcome() {
   const [players, setPlayers] = useState([]);
@@ -28,8 +29,8 @@ function Welcome() {
   }, []);
 
   return (
-    <div>
-      <h1>Welcome</h1>
+    <div className="container">
+      <h1 className="welcome">Welcome</h1>
 
       <PlayersGrid players={players} sorting={sorting} />
     </div>

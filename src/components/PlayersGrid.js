@@ -7,23 +7,23 @@ const PlayersGrid = ({ players, sorting }) => {
       <table className="table table-bordered">
         <thead>
           <tr>
-            <th onClick={() => sorting("id")}>
-              Ranking <FaSort />
+            <th>
+              Ranking <FaSort onClick={() => sorting("id")} />
             </th>
-            <th onClick={() => sorting("name")}>
-              First Name <FaSort />
+            <th>
+              First Name <FaSort onClick={() => sorting("name")} />
             </th>
-            <th onClick={() => sorting("surname")}>
-              Surname <FaSort />
+            <th>
+              Surname <FaSort onClick={() => sorting("surname")} />
             </th>
-            <th onClick={() => sorting("nationality")}>
-              Nationality <FaSort />
+            <th>
+              Nationality <FaSort onClick={() => sorting("nationality")} />
             </th>
-            <th onClick={() => sorting("age")}>
-              Age <FaSort />
+            <th>
+              Age <FaSort onClick={() => sorting("age")} />
             </th>
-            <th onClick={() => sorting("points")}>
-              Points <FaSort />
+            <th>
+              Points <FaSort onClick={() => sorting("points")} />
             </th>
           </tr>
         </thead>
