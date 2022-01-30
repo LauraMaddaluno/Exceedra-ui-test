@@ -3,12 +3,21 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Nationality from "./Nationality.js";
 import Container from "react-bootstrap/Container";
+import {
+  Form,
+  FormGroup,
+  FormControl,
+  FormLabel,
+  Row,
+  Col,
+} from "react-bootstrap";
 
 const FormComp = () => {
   const initialValues = { name: "", surname: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [isSubmit, setIsSubmit] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -58,72 +67,89 @@ const FormComp = () => {
   };
 
   return (
-    <Container>
-      <h1>Please create an account</h1>
-
-      <section className="form">
-        <form onSubmit={handleSubmit}>
-          <div>
-            <lable>Name</lable>
-            <input
+    <Container className="container-md" id="form-container">
+      <h1 id="title">Please create an account</h1>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="2">
+            Name
+          </Form.Label>
+          <Col md="10">
+            <Form.Control
               className="form-control placeholders"
               type="text"
               name="name"
               placeholder={formErrors.name}
               value={formValues.name}
               onChange={handleChange}
-            ></input>
-          </div>
+            ></Form.Control>
+          </Col>
+        </Form.Group>
 
-          <div>
-            <label>Surname</label>
-            <input
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="2">
+            Surname
+          </Form.Label>
+          <Col md="10">
+            <Form.Control
               className="form-control placeholders"
               type="text"
               name="surname"
               placeholder={formErrors.surname}
               value={formValues.surname}
               onChange={handleChange}
-            ></input>
-          </div>
+            ></Form.Control>
+          </Col>
+        </Form.Group>
 
-          <div>
-            <label></label>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="2">
+            Country
+          </Form.Label>
+          <Col md="10">
             <Nationality setSelectedCountry={setSelectedCountry} />
-          </div>
+          </Col>
+        </Form.Group>
 
-          <br></br>
-
-          <div>
-            <label>Email</label>
-            <input
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="2">
+            email
+          </Form.Label>
+          <Col md="10">
+            <Form.Control
               className="form-control placeholders"
               type="email"
               name="email"
               placeholder={formErrors.email}
               value={formValues.email}
               onChange={handleChange}
-            ></input>
-          </div>
+            ></Form.Control>
+          </Col>
+        </Form.Group>
 
-          <div>
-            <label>Password</label>
-            <input
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="2">
+            password
+          </Form.Label>
+          <Col md="10">
+            <Form.Control
               className="form-control"
               type="password"
               name="password"
               placeholder="must be 4-10 characters"
               value={formValues.password}
               onChange={handleChange}
-            ></input>
-          </div>
-          <p>{formErrors.password}</p>
+            ></Form.Control>
+          </Col>
+        </Form.Group>
+        <p>{formErrors.password}</p>
 
-          <div>
-            <button className="btn btn-block">Register</button>
-          </div>
-        </form>
-      </section>
+        <Col md="12">
+          <button className="btn btn-block btn-primary" id="btn-register">
+            Register
+          </button>
+        </Col>
+      </Form>
     </Container>
   );
 };
