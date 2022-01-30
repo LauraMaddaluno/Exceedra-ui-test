@@ -1,6 +1,7 @@
 import React from "react";
 import PlayersGrid from "./PlayersGrid";
 import { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import "../index.css";
 
 function Welcome() {
@@ -29,11 +30,16 @@ function Welcome() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="welcome-div">
       <h1 className="welcome">Welcome</h1>
-
-      <PlayersGrid players={players} sorting={sorting} />
+      <Container responsive>
+        {/* <div className="container responsive"> */}
+        {/* <table className="table table-bordered responsive"> */}
+        <PlayersGrid players={players} sorting={sorting} />
+        {/* </table> */}
+      </Container>
     </div>
+    // </div>
   );
 }
 
