@@ -11,9 +11,14 @@ body {
   height: 100vh;
 }
 
-p {
+#msg-error-psw {
   line-height: 1.7;
   color: rgb(221, 97, 25);
+  font-weight: 900;
+}
+
+p {
+  font-size: 1.5rem;
 }
 
 h1 {
@@ -21,17 +26,24 @@ h1 {
   text-align: center;
 }
 #title {
-  margin: 1em;
   padding: 1em;
+  padding-bottom: 0%;
+}
+#account {
+  margin-bottom: 5%;
 }
 
 #form-container {
   width: 90%;
-  margin: auto;
+  margin-right: 70px;
 }
 
 input.placeholders::placeholder {
   color: rgb(221, 97, 25);
+}
+
+.label {
+  font-weight: 900;
 }
 
 .options {
@@ -41,16 +53,29 @@ input.placeholders::placeholder {
 .welcome {
   margin: 1em;
   padding: 1em;
+  text-align: left;
+  /* justify-content: center;
+  flex-direction: column; */
 }
 
 .welcome-div {
   text-align: center;
+  /* justify-content: center;
+  flex-direction: column; */
 }
 
-@media (min-width: 992px) {
+@media (min-width: 500px) {
   #form-container {
-    width: 50%;
+    width: 60%;
+    margin-right: 70px;
+  }
+}
+@media (max-width: 500px) {
+  #form-container {
     margin: auto;
+  }
+  #title {
+    margin-left: 15%;
   }
 }
 
@@ -60,8 +85,10 @@ input.placeholders::placeholder {
 }
 
 #btn-register {
-  background: transparent;
   color: #212121;
   width: 100%;
   margin-top: 1em;
+  font-weight: 900;
+  border: double;
+  margin-bottom: 40%;
 }

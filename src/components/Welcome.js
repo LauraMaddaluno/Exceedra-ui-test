@@ -31,15 +31,12 @@ function Welcome() {
 
   return (
     <div className="welcome-div">
-      <h1 className="welcome">Welcome</h1>
+      <h3 className="welcome">Welcome</h3>
+
       <Container responsive>
-        {/* <div className="container responsive"> */}
-        {/* <table className="table table-bordered responsive"> */}
         <PlayersGrid players={players} sorting={sorting} />
-        {/* </table> */}
       </Container>
     </div>
-    // </div>
   );
 }
 
