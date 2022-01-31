@@ -1,4 +1,38 @@
-Front-end Developer Tech Test
+## Exeedra Front-end Developer Tech Test
+
+My goal for this technical test was to provide clean code that met all the requirements. Despite my desire to start testing following a TDD approach, I had to make a decision due to the time I could devote to it, so I preferred to provide a working interface product.
+
+To run this project:
+
+### To Run
+
+- Clone the Repo: `git clone https://github.com/LauraMaddaluno/Exceedra-ui-test`
+
+#### Start App
+
+```
+npm install
+```
+
+```
+Terminal 1: npm run server
+```
+
+```
+Terminal 2: npm start
+```
+
+## Technology
+
+#### Frontend:
+
+I build the front end in React, using Javascript, and styled using CSS and Bootstrap.
+
+#### Backend:
+
+I mocked the backend, using JSON server and creating my own rest API. I chose this option to retrive the players, thinking that it could have been beneficial for the tests and also thinking about a possible expancion of the project, adding new player from the user input.
+
+### Tech test requirements:
 
 Brief  
 You are the accountant of a tennis club. You are also a renowned Front End developer they know they cannot do anything without you. The first task in your list is to prepare a registration form for new users, which takes them to a welcome page with a list of all players in the club.
