@@ -41,6 +41,7 @@ input.placeholders::placeholder {
 .welcome {
   margin: 1em;
   padding: 1em;
+  text-align: left;
 }
 
 .welcome-div {
