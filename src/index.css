@@ -35,7 +35,7 @@ a {
 nav,
 li {
   display: inline-block;
-  padding: 0 5px;
+  padding: 0 3px;
 }
 
 li,
@@ -55,13 +55,8 @@ a:hover {
   /* background-color: #999; */
 }
 
-.container {
-  border-radius: 5px;
-
-  /* background-color: rgb(121 171 216); */
-}
-
 form {
+  margin-top: 10%;
   padding: 10% 5%;
   background-color: #f2f2f2;
   border-radius: 10px;
@@ -91,7 +86,7 @@ select {
   text-align: center;
 }
 #title {
-  padding-top: 50px;
+  padding-top: 95px;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -117,6 +112,30 @@ button:hover {
 
 #pass {
   padding-top: 5%;
+}
+.table-container {
+  overflow-x: auto;
+  padding-top: 5%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:hover {
+  background-color: rgb(138, 199, 253);
+}
+
+.welcome {
+  text-align: center;
+  padding-top: 50px;
 }
 
 @media (min-width: 800px) {

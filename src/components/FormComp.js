@@ -2,15 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Nationality from "./Nationality.js";
-// import Container from "react-bootstrap/Container";
-// import {
-//   Form,
-//   FormGroup,
-//   FormControl,
-//   FormLabel,
-//   Row,
-//   Col,
-// } from "react-bootstrap";
 
 const FormComp = () => {
   const initialValues = { name: "", surname: "", email: "", password: "" };
