@@ -53,8 +53,8 @@ const FormComp = () => {
     }
     if (!values.email) {
       errors.email = "Enter your email";
-    } else if (!regex.test(values.email)) {
-      errors.email = "Please enter a valid format";
+    } else if (regex.test(values.email)) {
+      errors.email = "A valid format contains only lowercase letters";
     }
     if (!values.password) {
       errors.password = "Enter your password";
@@ -124,6 +124,7 @@ const FormComp = () => {
               ></input>
             </div>
           </div>
+          <p id="error-psw">{formErrors.email}</p>
           <div className="row">
             <div className="col-25">
               <label>Password</label>
