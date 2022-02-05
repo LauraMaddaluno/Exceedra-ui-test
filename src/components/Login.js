@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { AiOutlineUser } from "react-icons/ai";
 
 const Login = () => {
   const [isSubmit, setIsSubmit] = useState(false);
@@ -32,6 +33,9 @@ const Login = () => {
   return (
     <div style={{ paddingTop: "50px" }}>
       <form onSubmit={onSubmit}>
+        <div className="user-icon">
+          <AiOutlineUser size={50} />
+        </div>
         <label htmlFor="email">Email</label>
         <input
           type="email"
@@ -41,17 +45,20 @@ const Login = () => {
           onChange={onChange}
           required
         ></input>
-
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder=""
-          value={loginValue.password}
-          onChange={onChange}
-          required
-        ></input>
-        <button>Login</button>
+        <div id="pass">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder=""
+            value={loginValue.password}
+            onChange={onChange}
+            required
+          ></input>
+        </div>
+        <div id="pass">
+          <button>Login</button>
+        </div>
       </form>
     </div>
   );

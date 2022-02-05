@@ -2,15 +2,15 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Nationality from "./Nationality.js";
-import Container from "react-bootstrap/Container";
-import {
-  Form,
-  FormGroup,
-  FormControl,
-  FormLabel,
-  Row,
-  Col,
-} from "react-bootstrap";
+// import Container from "react-bootstrap/Container";
+// import {
+//   Form,
+//   FormGroup,
+//   FormControl,
+//   FormLabel,
+//   Row,
+//   Col,
+// } from "react-bootstrap";
 
 const FormComp = () => {
   const initialValues = { name: "", surname: "", email: "", password: "" };
@@ -67,90 +67,85 @@ const FormComp = () => {
   };
 
   return (
-    <Container className="container-md" id="form-container">
-      <h1 id="title">Please create an account</h1>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column sm="2">
-            Name
-          </Form.Label>
-          <Col md="10">
-            <Form.Control
-              className="form-control placeholders"
-              type="text"
-              name="name"
-              placeholder={formErrors.name}
-              value={formValues.name}
-              onChange={handleChange}
-            ></Form.Control>
-          </Col>
-        </Form.Group>
+    <div>
+      <div className="container">
+        <h1 id="title">Please create an account</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="name">Name</label>
+            </div>
+            <div className="col-75">
+              <input
+                className="input"
+                type="text"
+                name="name"
+                placeholder={formErrors.name}
+                value={formValues.name}
+                onChange={handleChange}
+              ></input>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-25">
+              <label>Surname</label>
+            </div>
+            <div className="col-75">
+              <input
+                className="form-control placeholders"
+                type="text"
+                name="surname"
+                placeholder={formErrors.surname}
+                value={formValues.surname}
+                onChange={handleChange}
+              ></input>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-25">
+              <label>Country</label>
+            </div>
+            <div className="col-75">
+              <Nationality setSelectedCountry={setSelectedCountry} />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-25">
+              <label>Email</label>
+            </div>
+            <div className="col-75">
+              <input
+                className="form-control placeholders"
+                type="email"
+                name="email"
+                placeholder={formErrors.email}
+                value={formValues.email}
+                onChange={handleChange}
+              ></input>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-25">
+              <label>Password</label>
+            </div>
+            <div className="col-75">
+              <input
+                className="form-control"
+                type="password"
+                name="password"
+                placeholder="must be 4-10 characters"
+                value={formValues.password}
+                onChange={handleChange}
+              ></input>
+            </div>
+          </div>
 
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column sm="2">
-            Surname
-          </Form.Label>
-          <Col md="10">
-            <Form.Control
-              className="form-control placeholders"
-              type="text"
-              name="surname"
-              placeholder={formErrors.surname}
-              value={formValues.surname}
-              onChange={handleChange}
-            ></Form.Control>
-          </Col>
-        </Form.Group>
+          <p id="error-psw">{formErrors.password}</p>
 
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column sm="2">
-            Country
-          </Form.Label>
-          <Col md="10">
-            <Nationality setSelectedCountry={setSelectedCountry} />
-          </Col>
-        </Form.Group>
-
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column sm="2">
-            email
-          </Form.Label>
-          <Col md="10">
-            <Form.Control
-              className="form-control placeholders"
-              type="email"
-              name="email"
-              placeholder={formErrors.email}
-              value={formValues.email}
-              onChange={handleChange}
-            ></Form.Control>
-          </Col>
-        </Form.Group>
-
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column sm="2">
-            password
-          </Form.Label>
-          <Col md="10">
-            <Form.Control
-              className="form-control"
-              type="password"
-              name="password"
-              placeholder="must be 4-10 characters"
-              value={formValues.password}
-              onChange={handleChange}
-            ></Form.Control>
-          </Col>
-        </Form.Group>
-        <p>{formErrors.password}</p>
-
-        <Col md="12">
-          <button className="btn btn-block btn-primary" id="btn-register">
-            Register
-          </button>
-        </Col>
-      </Form>
-    </Container>
+          <button className="button">Register</button>
+        </form>
+      </div>
+    </div>
   );
 };
 

@@ -17,7 +17,7 @@ const Nationality = ({ setSelectedCountry }) => {
   }, []);
 
   return (
-    <select className="form-control options" onChange={handleChange}>
+    <select className="select" onChange={handleChange}>
       <option hidden> Select (optional) </option>
       {countries.map((country) => (
         <option>{country.name}</option>
