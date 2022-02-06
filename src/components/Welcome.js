@@ -12,6 +12,7 @@ function Welcome() {
     if (order === "ASC") {
       const sorted = [...players].sort((a, b) => (a[col] > b[col] ? 1 : -1));
       setPlayers(sorted);
+
       setOrder("DES");
     } else {
       const sorted = [...players].sort((a, b) => (a[col] < b[col] ? 1 : -1));
@@ -32,9 +33,8 @@ function Welcome() {
   return (
     <div className="welcome-div">
       <h1 className="welcome">Welcome</h1>
-      <Container responsive>
-        <PlayersGrid players={players} sorting={sorting} />
-      </Container>
+
+      <PlayersGrid players={players} sorting={sorting} />
     </div>
   );
 }
