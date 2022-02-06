@@ -35,7 +35,7 @@ const FormComp = () => {
 
   const validate = (values) => {
     const errors = {};
-    const regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/i;
+    const regex = /[a-z0-9]+@[a-z]+.[a-z]{2,3}$/;
     if (!values.name) {
       errors.name = "Enter your name";
     }
@@ -44,8 +44,8 @@ const FormComp = () => {
     }
     if (!values.email) {
       errors.email = "Enter your email";
-    } else if (regex.test(values.email)) {
-      errors.email = "A valid format contains only lowercase letters";
+    } else if (!regex.test(values.email)) {
+      errors.email = "A valid format must contains only lowercase letters";
     }
     if (!values.password) {
       errors.password = "Enter your password";
